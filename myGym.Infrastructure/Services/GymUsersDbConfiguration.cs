@@ -1,4 +1,4 @@
-﻿using gym.Infrastructure.Data;
+﻿using gym.Infrastructure.Persistances.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

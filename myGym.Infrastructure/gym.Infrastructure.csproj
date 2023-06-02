@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.1.0" />
     <PackageReference Include="EntityFramework" Version="4.1.10331" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
@@ -22,6 +23,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\gym.Domain\gym.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persistances\Repositories\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>
