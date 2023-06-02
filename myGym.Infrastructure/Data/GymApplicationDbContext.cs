@@ -9,9 +9,9 @@ using System.Text;
 
 namespace gym.Infrastructure.Data
 {
-    public class GymApplicationDbContext:IdentityDbContext<IdentityUser>
+    public class  ApplicationDbContext:IdentityDbContext<IdentityUser>
     {
-        public GymApplicationDbContext(DbContextOptions<GymApplicationDbContext> options):base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
             
         }
