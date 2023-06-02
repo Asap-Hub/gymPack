@@ -1,0 +1,16 @@
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.deps.json
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.json
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.dev.json
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.dll
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.pdb
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Domain.dll
+D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Domain.pdb
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.AssemblyReference.cache
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.AssemblyInfoInputs.cache
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.AssemblyInfo.cs
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CoreCompileInputs.cache
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CopyComplete
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.dll
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.pdb
+D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.genruntimeconfig.cache
