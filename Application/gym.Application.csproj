@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\TodoCommands\Handler\Queries\" />
+    <Folder Include="Commands\Application\TodoCommands\Handler\Queries\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 

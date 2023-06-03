@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mappers\**" />
+    <Content Remove="Mappers\**" />
+    <EmbeddedResource Remove="Mappers\**" />
+    <None Remove="Mappers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="EntityFramework" Version="4.1.10331" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.5" />
@@ -29,7 +36,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Mappers\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿using gym.Application.Extentions;
+﻿using gym.Application.Extentions.IdentityExtension;
 using gym.Application.Interfaces.Repositories;
 using gym.Infrastructure.Persistances.Data.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Data.IdentityDbContext;

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace gym.Application.Extentions
+namespace gym.Application.Extentions.IdentityExtension
 {
-    public class User:IdentityUser<string>
+    public class User : IdentityUser<string>
     {
 
     }

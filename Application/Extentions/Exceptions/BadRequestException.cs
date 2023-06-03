@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace gym.Application.Exceptions
+namespace gym.Application.Extentions.Exceptions
 {
-    public class BadRequestException: ApplicationException
+    public class BadRequestException : ApplicationException
     {
-        public BadRequestException(string Message):base(Message)
+        public BadRequestException(string Message) : base(Message)
         {
-            
+
         }
     }
 }
