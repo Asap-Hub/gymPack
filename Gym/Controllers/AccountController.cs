@@ -34,14 +34,7 @@ namespace gym.Api.Controllers
             });
 
             if(createUser != null)
-            {
-                //return Ok(new BaseResponse { 
-                //Id = createDto.GetHashCode(),
-                //IsSuccess = true,
-                //Message = "Registration Successfully",
-                //statusCode = StatusCodes.Status200OK,
-
-                //});
+            { 
                 return CreatedAtRoute("ConfirmAccount", 
                     new BaseResponse
                     {
@@ -80,6 +73,31 @@ namespace gym.Api.Controllers
                 IsSuccess = true,
                 statusCode = StatusCodes.Status400BadRequest,
                 Message = "Email Confirmation was Unsuccessful"
+            });
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> signInWithTwoFactoryAuth(string Email, bool RememberMe)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthCommand {Email = Email, RememberMe = RememberMe });
+            if(signInWith2Fac != null)
+            {
+                return Ok(new BaseResponse { 
+                IsSuccess = true,
+                statusCode = StatusCodes.Status200OK,
+                });
+            }
+
+            return BadRequest(new BaseResponse
+            {
+                IsSuccess = false,
+                statusCode = StatusCodes.Status200OK,
             });
         }
     }

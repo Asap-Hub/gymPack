@@ -30,8 +30,8 @@ namespace gym.Application.Commands.AccountUser.Handlers
 
             if(findUser != null)
             {
-                EmailMFA.securityCode = string.Empty;
-                EmailMFA.RememberMe = request.RememberMe;
+                //EmailMFA.securityCode = request.Email;
+                //EmailMFA.RememberMe = request.RememberMe;
                 var getSecurityCode = await _userManager.GenerateTwoFactorTokenAsync(findUser, "Email");
                 if(getSecurityCode != null)
                 {
@@ -52,19 +52,4 @@ namespace gym.Application.Commands.AccountUser.Handlers
     }
 }
 
-////generate the authentication code
-//var findUser = await _userManager.FindByEmailAsync(Email);
-//emailMFA.securityCode = string.Empty;
-//emailMFA.RememberMe = RememberMe;
-
-//var getSecurityCode = await _userManager.GenerateTwoFactorTokenAsync(findUser, "Email");
-
-////send the authentication code
-
-//await _emailServices.sendEmailAsync(
-// "ab@gmail.com",
-// Email,
-// "Asap-Hub OTP Code",
-// $"use this otp to login into your app.{getSecurityCode}"
-// );
-//return Ok();
+ 
