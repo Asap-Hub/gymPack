@@ -57,13 +57,25 @@
               "target": "Package",
               "version": "[4.1.10331, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[10.3.5, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -72,6 +84,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -96,6 +112,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.Exchange.WebServices": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
@@ -180,10 +200,6 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[10.3.5, )"
-            },
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.0.1, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -294,13 +310,25 @@
               "target": "Package",
               "version": "[4.1.10331, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[10.3.5, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -432,13 +460,25 @@
               "target": "Package",
               "version": "[4.1.10331, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[10.3.5, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

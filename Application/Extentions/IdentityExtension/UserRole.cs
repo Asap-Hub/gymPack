@@ -5,7 +5,7 @@ using System.Text;
 
 namespace gym.Application.Extentions.IdentityExtension
 {
-    public class UserRole : IdentityRole<string>
+    public class UserRole : IdentityRole
     {
     }
 }

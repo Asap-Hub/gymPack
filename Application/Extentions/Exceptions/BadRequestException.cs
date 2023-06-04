@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace gym.Application.Extentions.Exceptions
 {
-    public class BadRequestException : ApplicationException
+    public class BadRequestException 
     {
-        public BadRequestException(string Message) : base(Message)
+        public BadRequestException(IdentityError Message)
         {
 
         }

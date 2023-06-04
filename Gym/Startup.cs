@@ -1,11 +1,19 @@
-using gym.Infrastructure.Services.Extension;
+using gym.Infrastructure;
+using gym.Infrastructure.Services.Email;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting; 
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Reflection;
+using System.Security.Claims;
+using System.Text;
 
 namespace Gym
 {
@@ -35,12 +43,13 @@ namespace Gym
 
             //handing application database
             services.ApplicationDbContextConfiguration(this.Configuration);
+
             //ApplicationServicesRegistration
             services.ConfigureApplicationServices();
 
             //configuration for repositories
             services.AddRepositories();
-
+            //services.AddMediatR(Assembly.GetExecutingAssembly());
 
             //for configuring the identity database
             services.IdentityDbContextConfiguration(this.Configuration);
@@ -69,6 +78,8 @@ namespace Gym
             });
 
 
+            services.Configure<SMTPSettings>(this.Configuration.GetSection("SMTP"));
+
             ////dbcontext for handling orders
             //services.AddDbContext<ApplicationDbContext>(options =>
             //{
@@ -84,6 +95,22 @@ namespace Gym
             //services.AddIdentity<User, UserRole>()
             //.AddEntityFrameworkStores<IdentityDbContext>()
             //.AddDefaultTokenProviders();
+
+
+            string CreateToken(IEnumerable<Claim> claims, DateTime expiresAt)
+            {
+                var secreteKey = Encoding.UTF8.GetBytes(Configuration.GetValue<string>("JWT:Key"));
+
+                var jwt = new JwtSecurityToken(
+                    claims: claims,
+                    notBefore: DateTime.UtcNow,
+                    expires: expiresAt,
+                    signingCredentials: new SigningCredentials(
+                        new SymmetricSecurityKey(secreteKey),
+                        SecurityAlgorithms.HmacSha256Signature));
+
+                return new JwtSecurityTokenHandler().WriteToken(jwt);
+            }
 
         }
 
@@ -105,6 +132,8 @@ namespace Gym
             {
                 c.SwaggerEndpoint("v1/swagger.json", "My API V1");
             });
+
+            //app.UseMvc();
 
             app.UseHttpsRedirection();
 

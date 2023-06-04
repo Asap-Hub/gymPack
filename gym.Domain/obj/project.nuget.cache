@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DEoromnwskIwUpI+7uuRO1XvHha59YWm9hZaXoNkcaAOzLJ4GJ2srzjKAfIUnW3SmjQ0trvuuI4fhbAt83QT3Q==",
+  "dgSpecHash": "mp+xVpqQ42wExKfM78/H9ucnjCuIp7831cfWE5yL0GyObjG2HhH4WVWuoTYKcot9vQzW2tPV5jzB94Q3DonrxA==",
   "success": true,
   "projectFilePath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
   "expectedPackageFiles": [
@@ -9,12 +9,10 @@
     "C:\\Users\\ASAP\\.nuget\\packages\\entityframework\\4.1.10331\\entityframework.4.1.10331.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.5\\fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.0\\microsoft.aspnetcore.cryptography.internal.3.1.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.0\\microsoft.aspnetcore.cryptography.keyderivation.3.1.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.0\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.0.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.0\\microsoft.entityframeworkcore.3.1.0.nupkg.sha512",
