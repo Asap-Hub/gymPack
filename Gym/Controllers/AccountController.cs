@@ -85,7 +85,7 @@ namespace gym.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthCommand {Email = Email, RememberMe = RememberMe });
+            var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthRequest {Email = Email, RememberMe = RememberMe });
             if(signInWith2Fac != null)
             {
                 return Ok(new BaseResponse { 
@@ -99,6 +99,33 @@ namespace gym.Api.Controllers
                 IsSuccess = false,
                 statusCode = StatusCodes.Status200OK,
             });
+        }
+
+        [HttpPost]
+        public  async Task<IActionResult> verifyWithTwoFactoryAuth(string SecurityCode, bool RememberMe)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var verifyMyOTP = await _mediator.Send(new verifyTwoFacAuthCommand { SecurityCode = SecurityCode, RememberMe = RememberMe });
+
+            if(verifyMyOTP != null)
+            {
+                return Ok(new BaseResponse
+                {
+                    IsSuccess = true,
+                    statusCode = StatusCodes.Status200OK,
+                });
+            }
+
+            return Ok(new BaseResponse
+            {
+                IsSuccess = true,
+                statusCode = StatusCodes.Status400BadRequest,
+            });
+
         }
     }
 }

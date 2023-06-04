@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class signInWithTwoFactoryAuthCommandHandler : IRequestHandler<signInWithTwoFactoryAuthCommand, BaseResponse>
+    public class signInWithTwoFactoryAuthCommandHandler : IRequestHandler<signInWithTwoFactoryAuthRequest, BaseResponse>
     {
         private readonly UserManager<User> _userManager;
         private readonly IEmailService _emailService;
@@ -24,7 +24,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
             _emailService = emailService;
         }
         public EmailMFA EmailMFA { get; set; }
-        public async Task<BaseResponse> Handle(signInWithTwoFactoryAuthCommand request, CancellationToken cancellationToken)
+        public async Task<BaseResponse> Handle(signInWithTwoFactoryAuthRequest request, CancellationToken cancellationToken)
         {
             var findUser = await _userManager.FindByEmailAsync(request.Email);
 
