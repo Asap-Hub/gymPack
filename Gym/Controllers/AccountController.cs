@@ -102,7 +102,7 @@ namespace gym.Api.Controllers
         }
 
         [HttpPost]
-        public  async Task<IActionResult> verifyWithTwoFactoryAuth(string SecurityCode, bool RememberMe)
+        public async Task<IActionResult> verifyWithTwoFactoryAuth(string SecurityCode, bool RememberMe)
         {
             if (!ModelState.IsValid)
             {
@@ -126,6 +126,34 @@ namespace gym.Api.Controllers
                 statusCode = StatusCodes.Status400BadRequest,
             });
 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> signUserOut([FromBody] string Email)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var signOut = _mediator.Send(new signUserOutCommand {Email = Email });
+
+            if (signOut != null)
+            {
+                return Ok(new BaseResponse
+                {
+                    IsSuccess = true,
+                    statusCode = StatusCodes.Status200OK,
+                });
+            }
+            else
+            {
+                return Ok(new BaseResponse
+                {
+                    IsSuccess = true,
+                    statusCode = StatusCodes.Status200OK,
+                });
+            }
         }
     }
 }
