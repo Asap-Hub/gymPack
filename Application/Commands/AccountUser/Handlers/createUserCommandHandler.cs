@@ -64,7 +64,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
 
 
-                var verificationLink = urlHelper.PageLink(pageName: "/confirmation",
+                var verificationLink = urlHelper.PageLink(pageName: "/ConfirmAccount",
                             values: new
                             {
                                 User = dto.Id,
@@ -85,13 +85,13 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
                 foreach (var error in createUser.Errors)
                 {
-                    //return new BaseResponse
-                    //{
-                    //    Message = "Error",
-                    //    IsSuccess = false,
-                    //    Errors = error,
-                    //};
-                    Console.WriteLine(error);
+                    return new BaseResponse
+                    {
+                        Message = "Error",
+                        IsSuccess = false,
+                        Errors = error,
+                    };
+                    //Console.WriteLine(error);
                 }
             }
             return new BaseResponse {
@@ -100,38 +100,5 @@ namespace gym.Application.Commands.IdentityCommand.Queries
             };
         }
 
-        //if (createUser.Succeeded)
-        //{
-        //    var confirmEmail = await _userManager.GenerateEmailConfirmationTokenAsync(dto);
-        //    // return Ok( value: new {
-        //    //     User = dto.Id,
-        //    //     Token = confirmEmail,
-        //    //});
-        //    var verificationLink = Url.PageLink(pageName: "SOME ROUTE",
-        //                 values: new
-        //                 {
-        //                     User = dto.Id,
-        //                     Token = confirmEmail,
-        //                 }
-        //        );
-
-        //    await _emailServices.sendEmailAsync("ab@gmail.com",
-        //        user.Email!,
-        //        "Please confirm your email",
-        //        $"please click on this link to confirms your email address:{verificationLink}"
-        //        );
-
-        //}
-        //else
-        //{
-            //foreach (var error in createUser.Errors)
-            //{
-            //    ModelState.AddModelError("Registration", error.Description);
-            //}
-    //}
-    //return BadRequest(ModelState);
-
-}
-
-
+    }
 }
