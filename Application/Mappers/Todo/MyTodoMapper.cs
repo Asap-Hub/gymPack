@@ -16,6 +16,7 @@ namespace gym.Application.Mappers.Todo
 
             CreateMap<TodoDto, TblMyTodo>().ReverseMap();
             CreateMap<CreateTodoDto, TblMyTodo>().ReverseMap();
+            CreateMap<UpdateTodoDto, TblMyTodo>().ReverseMap(); 
         }
     }
 }

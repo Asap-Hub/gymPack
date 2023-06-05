@@ -2,9 +2,7 @@
 using gym.Application.Extentions.IdentityExtension;
 using gym.Application.Extentions.Responses;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Exchange.WebServices.Data;
-using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Identity; 
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -51,16 +49,4 @@ namespace gym.Application.Commands.AccountUser.Handlers
         }
     
     }
-}
-//var findUser = await _userManager.FindByIdAsync(userID);
-
-//if (findUser != null)
-//{
-//    var result = await _userManager.ConfirmEmailAsync(findUser, Token);
-//    if (result.Succeeded)
-//    {
-//        return Ok(value: new Message { message = "Email Confirmation was successful" });
-
-//    }
-//}
-//return BadRequest(error: new Message { message = "Email Confirmation was successful" });
+} 

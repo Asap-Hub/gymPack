@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using gym.Application.DTOs.ProgressDtos;
 using gym.Domain.Model;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ namespace gym.Application.Mappers.Progress
         {
 
             CreateMap<ProgressMapper, TblProgress>().ReverseMap();
+            CreateMap<UpdateProgressDto, TblProgress>().ReverseMap();   
+            CreateMap<CreateProgressDto, TblProgress>().ReverseMap();   
         }
     }
 }

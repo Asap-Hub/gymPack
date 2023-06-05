@@ -1,5 +1,5 @@
 ﻿using gym.Application.Commands.AccountUser.Requests;
-using gym.Application.Extentions;
+using gym.Application.DTOs.Common;
 using gym.Application.Extentions.IdentityExtension;
 using gym.Application.Extentions.Responses;
 using gym.Application.Interfaces.Services;

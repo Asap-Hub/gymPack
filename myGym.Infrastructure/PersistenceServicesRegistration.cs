@@ -10,11 +10,9 @@ using gym.Application.Interfaces;
 using gym.Application.Interfaces.Services;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Repositories;
-using gym.Infrastructure.Services.Email;
-using MediatR;
+using gym.Infrastructure.Services.Email; 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -27,26 +25,16 @@ using System.Text;
 
 namespace gym.Infrastructure
 {
-    public static class ApplicationServicesRegistration
+    public static class PersistenceServicesRegistration
     {
 
-        //service for adding middlewares
-        public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
-        {
-            services.AddAutoMapper(Assembly.GetExecutingAssembly()); 
-            services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(createUserCommandRequest).Assembly);
-            services.AddControllers().AddFluentValidation();
-            return services;
-        }
-
-
+      
 
         //service for adding repositories
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped(typeof(IGenericBaseRepository<>), typeof(GenericBaseRepository<>));
-            services.AddTransient<IEmailService, EmailService>();
-            //services.AddTransient<IUrlHelper,>
+            services.AddTransient<IEmailService, EmailService>(); 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped(x =>
             {

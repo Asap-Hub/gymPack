@@ -5,12 +5,12 @@ using System.Text;
 
 namespace gym.Application.DTOs.ProgressDtos
 {
-    public class ProgressDto : BaseDto
+    public class ProgressDto : BaseIdDto
     {
-        public string Status { get; set; } = null!;
+        public string Status { get; set; }  
         public int Percentage { get; set; }
         public bool Completed { get; set; }
         public bool Reviewed { get; set; }
-        public string ReviewBy { get; set; } = null!;
+        public string ReviewBy { get; set; } 
     }
 }

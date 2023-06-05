@@ -1,6 +1,6 @@
+using gym.Application;
 using gym.Infrastructure;
-using gym.Infrastructure.Services.Email;
-using MediatR;
+using gym.Infrastructure.Services.Email; 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,8 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Reflection;
+using System.IdentityModel.Tokens.Jwt; 
 using System.Security.Claims;
 using System.Text;
 
@@ -41,12 +40,12 @@ namespace Gym
                     .AllowAnyHeader());
             });
 
-            //handing application database
-            services.ApplicationDbContextConfiguration(this.Configuration);
-
             //ApplicationServicesRegistration
             services.ConfigureApplicationServices();
 
+            //handing application database
+            services.ApplicationDbContextConfiguration(this.Configuration);
+ 
             //configuration for repositories
             services.AddRepositories();
             //services.AddMediatR(Assembly.GetExecutingAssembly());

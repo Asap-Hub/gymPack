@@ -11,7 +11,7 @@ namespace gym.Domain.Model
         public int Percentage { get; set; }
         public bool Completed { get; set; }
         public bool Reviewed { get; set; }
-        public string? ReviewBy { get; set; }
+        public string ReviewBy { get; set; }
          
     }
 }

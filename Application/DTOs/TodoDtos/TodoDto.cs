@@ -5,7 +5,7 @@ using System.Text;
 
 namespace gym.Application.DTOs.TodoDtos
 {
-    public class TodoDto : BaseDto
+    public class TodoDto : BaseIdDto
     {
         public string Title { get; set; }
 

@@ -136,7 +136,7 @@ namespace gym.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var signOut = _mediator.Send(new signUserOutCommand {Email = Email });
+            var signOut = await _mediator.Send(new signUserOutCommand {Email = Email });
 
             if (signOut != null)
             {
