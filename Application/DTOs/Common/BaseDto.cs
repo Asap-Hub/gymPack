@@ -4,8 +4,9 @@ using System.Text;
 
 namespace gym.Application.DTOs.Common
 {
-    public abstract class BaseDto
+    public abstract class BaseDto 
     {
-        public int Id { get; set; }
+        public string CreatedBy { get; set; } 
+        public string EdittedBy { get; set; }
     }
 }

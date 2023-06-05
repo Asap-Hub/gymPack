@@ -6,10 +6,11 @@ namespace gym.Domain.Common
 {
     public abstract class BaseDomain
     {
+        
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public DateTime EdittedDate { get; set; }
-        public int EdittedBy { get; set; }
+        public string EdittedBy { get; set; }
     }
 }

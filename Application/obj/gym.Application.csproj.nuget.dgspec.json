@@ -53,39 +53,31 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[12.0.1, )"
             },
-            "EntityFramework": {
+            "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[4.1.10331, )"
+              "version": "[10.0.0, )"
             },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[10.3.5, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "MediatR": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[11.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[11.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Relational": {
+            "Microsoft.Exchange.WebServices": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[2.2.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -103,14 +95,6 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
               "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -164,34 +148,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[4.1.10331, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -207,14 +163,6 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
               "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
