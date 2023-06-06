@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class signUserOutCommandHandler : IRequestHandler<signUserOutCommand, BaseResponse>
+    public class signUserOutCommandHandler : IRequestHandler<signUserOutCommand, IdentityBaseResponse>
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
@@ -21,20 +21,20 @@ namespace gym.Application.Commands.AccountUser.Handlers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        public async Task<BaseResponse> Handle(signUserOutCommand request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(signUserOutCommand request, CancellationToken cancellationToken)
         {
             var findUser = await _userManager.FindByEmailAsync(request.Email);
             if(findUser != null)
             {
                 await _signInManager.SignOutAsync();
 
-                return new BaseResponse
+                return new IdentityBaseResponse
                 {
                     IsSuccess = true,
                     Message = "SignOut Successfully"
                 };
             }
-            return new BaseResponse
+            return new IdentityBaseResponse
             {
                 IsSuccess = false,
                 Message = "Operation Failed"

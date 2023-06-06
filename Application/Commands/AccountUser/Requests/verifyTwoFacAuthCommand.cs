@@ -6,7 +6,7 @@ using System.Text;
 
 namespace gym.Application.Commands.AccountUser.Requests
 {
-    public class verifyTwoFacAuthCommand : IRequest<BaseResponse>
+    public class verifyTwoFacAuthCommand : IRequest<IdentityBaseResponse>
     {
         public string SecurityCode { get; set; }
         public bool RememberMe { get; set; }

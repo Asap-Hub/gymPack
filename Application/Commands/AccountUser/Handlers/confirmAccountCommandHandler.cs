@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class confirmAccountCommandHandler : IRequestHandler<ConfirmAccountCommand, BaseResponse>
+    public class confirmAccountCommandHandler : IRequestHandler<ConfirmAccountCommand, IdentityBaseResponse>
     {
         private readonly UserManager<User> _userManager;
 
@@ -20,19 +20,19 @@ namespace gym.Application.Commands.AccountUser.Handlers
             _userManager = userManager;
         }
 
-        public async Task<BaseResponse> Handle(ConfirmAccountCommand request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(ConfirmAccountCommand request, CancellationToken cancellationToken)
         {
             
             var findUser = await _userManager.FindByIdAsync(request.userId);
 
-            if(findUser != null) 
+            if(findUser !=null) 
             {
 
                 var result = await _userManager.ConfirmEmailAsync(findUser, request.Token);
                 if(result.Succeeded) 
                 {
 
-                    return new BaseResponse
+                    return new IdentityBaseResponse
                     {
                         IsSuccess = true,
                         Message = "Email Confirmation was successful", 
@@ -41,11 +41,15 @@ namespace gym.Application.Commands.AccountUser.Handlers
                 }
              }
 
-            return new BaseResponse
+            else
             {
-                IsSuccess = true,
-                Message = "Email Confirmation was Unsuccessful",
-            };
+                return new IdentityBaseResponse
+                {
+                    IsSuccess = false,
+                    Message = "Email Confirmation was Unsuccessful",
+                };
+            }
+            return null;
         }
     
     }

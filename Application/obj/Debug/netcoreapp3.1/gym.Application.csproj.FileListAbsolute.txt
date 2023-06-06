@@ -1,6 +1,4 @@
 D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.deps.json
-D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.json
-D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.dev.json
 D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.dll
 D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Application.pdb
 D:\Project\myGym\Application\bin\Debug\netcoreapp3.1\gym.Domain.dll
@@ -13,10 +11,7 @@ D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.Core
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CopyComplete
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.dll
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.pdb
-D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.genruntimeconfig.cache
 D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.deps.json
-D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.json
-D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.runtimeconfig.dev.json
 D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.dll
 D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.pdb
 D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Domain.dll
@@ -29,4 +24,3 @@ D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Applicati
 D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CopyComplete
 D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.dll
 D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.pdb
-D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.genruntimeconfig.cache

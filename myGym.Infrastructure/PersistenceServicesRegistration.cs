@@ -2,15 +2,18 @@
 using FluentValidation.AspNetCore;
 using gym.Application.Commands.IdentityCommand.Queries;
 using gym.Application.Commands.IdentityCommand.Requests;
+using gym.Application.Commands.Todo.Validations;
 using gym.Application.Commands.user.Validations;
 using gym.Application.DTOs.Identity;
+using gym.Application.DTOs.TodoDtos;
 using gym.Application.Extentions.Exceptions;
 using gym.Application.Extentions.IdentityExtension;
 using gym.Application.Interfaces;
 using gym.Application.Interfaces.Services;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Repositories;
-using gym.Infrastructure.Services.Email; 
+using gym.Infrastructure.Services.Email;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -27,10 +30,8 @@ namespace gym.Infrastructure
 {
     public static class PersistenceServicesRegistration
     {
-
-      
-
-        //service for adding repositories
+       
+         //service for adding repositories
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped(typeof(IGenericBaseRepository<>), typeof(GenericBaseRepository<>));
@@ -45,6 +46,8 @@ namespace gym.Infrastructure
 
             //registring fluent validation
             services.AddTransient<IValidator<CreateUserDto>, CreateUserValidation>();
+            services.AddTransient<IValidator<CreateTodoDto>, CreateTodoValidation>();
+            services.AddTransient<IValidator<UpdateTodoDto>, UpdateTodoValidation>();
 
             return services;
         }

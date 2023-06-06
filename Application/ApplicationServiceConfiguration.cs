@@ -3,6 +3,7 @@ using gym.Application.Commands.IdentityCommand.Requests;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -16,9 +17,12 @@ namespace gym.Application
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services )
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             //services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(createUserCommandRequest).Assembly);
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            //services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             services.AddControllers().AddFluentValidation();
+            
 
             return services;
         }

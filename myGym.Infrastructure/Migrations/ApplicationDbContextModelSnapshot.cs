@@ -228,14 +228,14 @@ namespace gym.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EdittedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("EdittedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EdittedDate")
                         .HasColumnType("datetime2");
@@ -255,6 +255,68 @@ namespace gym.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("tblMyTodo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            CreatedBy = "Instructor Malik",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4187),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4200),
+                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1933),
+                            Note = "finish hard",
+                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(2634),
+                            Title = "task 1"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedBy = "Instructor Malik",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4305),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4307),
+                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2006),
+                            Note = "finish hard",
+                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4271),
+                            Title = "task 2"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedBy = "Instructor Malik",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4312),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4314),
+                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2003),
+                            Note = "finish hard",
+                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4310),
+                            Title = "task 3"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedBy = "Instructor Malik",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4320),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4322),
+                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1997),
+                            Note = "finish hard",
+                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4317),
+                            Title = "task 4"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedBy = "Instructor Malik",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4326),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4328),
+                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1995),
+                            Note = "finish hard",
+                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4324),
+                            Title = "task 5"
+                        });
                 });
 
             modelBuilder.Entity("gym.Domain.Model.TblProgress", b =>
@@ -267,14 +329,20 @@ namespace gym.Infrastructure.Migrations
                     b.Property<bool>("Completed")
                         .HasColumnType("bit");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<bool>("Confirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ConfirmedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EdittedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("EdittedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EdittedDate")
                         .HasColumnType("datetime2");
@@ -282,18 +350,79 @@ namespace gym.Infrastructure.Migrations
                     b.Property<int>("Percentage")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReviewBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Reviewed")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("tblProgress");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Completed = false,
+                            Confirmed = false,
+                            ConfirmedBy = "Instructor Malik",
+                            CreatedBy = "Asap",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 785, DateTimeKind.Local).AddTicks(3339),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(5666),
+                            Percentage = 0,
+                            Status = "pending"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Completed = true,
+                            Confirmed = false,
+                            ConfirmedBy = "Instructor Malik",
+                            CreatedBy = "Asap",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6649),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6691),
+                            Percentage = 100,
+                            Status = "done"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Completed = true,
+                            Confirmed = true,
+                            ConfirmedBy = "Instructor Malik",
+                            CreatedBy = "Asap",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6719),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6722),
+                            Percentage = 100,
+                            Status = "done"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Completed = false,
+                            Confirmed = false,
+                            ConfirmedBy = "Instructor Malik",
+                            CreatedBy = "Asap",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6725),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6727),
+                            Percentage = 0,
+                            Status = "pending"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Completed = false,
+                            Confirmed = true,
+                            ConfirmedBy = "Instructor Malik",
+                            CreatedBy = "Asap",
+                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6730),
+                            EdittedBy = "Asap",
+                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6733),
+                            Percentage = 50,
+                            Status = "progress"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

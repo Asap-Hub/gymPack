@@ -79,8 +79,8 @@ namespace gym.Infrastructure.Migrations
                     Status = table.Column<string>(nullable: true),
                     Percentage = table.Column<int>(nullable: false),
                     Completed = table.Column<bool>(nullable: false),
-                    Reviewed = table.Column<bool>(nullable: false),
-                    ReviewBy = table.Column<string>(nullable: true)
+                    Confirmed = table.Column<bool>(nullable: false),
+                    ConfirmedBy = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

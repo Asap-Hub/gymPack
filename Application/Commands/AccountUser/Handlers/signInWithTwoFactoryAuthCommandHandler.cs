@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class signInWithTwoFactoryAuthCommandHandler : IRequestHandler<signInWithTwoFactoryAuthRequest, BaseResponse>
+    public class signInWithTwoFactoryAuthCommandHandler : IRequestHandler<signInWithTwoFactoryAuthRequest, IdentityBaseResponse>
     {
         private readonly UserManager<User> _userManager;
         private readonly IEmailService _emailService;
@@ -24,7 +24,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
             _emailService = emailService;
         }
         public EmailMFA EmailMFA { get; set; }
-        public async Task<BaseResponse> Handle(signInWithTwoFactoryAuthRequest request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(signInWithTwoFactoryAuthRequest request, CancellationToken cancellationToken)
         {
             var findUser = await _userManager.FindByEmailAsync(request.Email);
 
@@ -44,7 +44,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
                 }
             
             }
-            return new BaseResponse{ 
+            return new IdentityBaseResponse{ 
             IsSuccess = false,
             Message = "Unable To Signin using the provided Critecials"
             };

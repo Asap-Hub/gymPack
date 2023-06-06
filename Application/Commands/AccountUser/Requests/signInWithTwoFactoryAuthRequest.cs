@@ -6,7 +6,7 @@ using System.Text;
 
 namespace gym.Application.Commands.AccountUser.Requests
 {
-    public class signInWithTwoFactoryAuthRequest : IRequest<BaseResponse>
+    public class signInWithTwoFactoryAuthRequest : IRequest<IdentityBaseResponse>
     {
         public string Email { get; set; }
         public bool RememberMe { get; set; }

@@ -1,11 +1,13 @@
 using gym.Application;
 using gym.Infrastructure;
-using gym.Infrastructure.Services.Email; 
+using gym.Infrastructure.Services.Email;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
@@ -31,6 +33,10 @@ namespace Gym
         {
             services.AddControllers();
 
+            services.AddLogging(builder =>
+            {
+                builder.AddConsole(); // Register the console logger
+            });
 
             services.AddCors(o =>
             {
@@ -40,7 +46,12 @@ namespace Gym
                     .AllowAnyHeader());
             });
 
+
+            //registering mediatR
+            //services.AddMediatR(typeof(Startup));
+
             //ApplicationServicesRegistration
+            //services.ConfigureApplicationServices();
             services.ConfigureApplicationServices();
 
             //handing application database
@@ -52,6 +63,7 @@ namespace Gym
 
             //for configuring the identity database
             services.IdentityDbContextConfiguration(this.Configuration);
+
 
             //Configure swagger
             services.AddSwaggerGen();

@@ -284,10 +284,10 @@ namespace gym.Infrastructure.Migrations
                     b.Property<int>("Percentage")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReviewBy")
+                    b.Property<string>("ConfirmedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Reviewed")
+                    b.Property<bool>("Confirmed")
                         .HasColumnType("bit");
 
                     b.Property<string>("Status")

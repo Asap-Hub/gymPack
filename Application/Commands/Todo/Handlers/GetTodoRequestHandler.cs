@@ -15,14 +15,12 @@ namespace gym.Application.Commands.Todo.Handlers
     public class GetTodoRequestHandler : IRequestHandler<GetTodoRequest, TodoDto>
     {
         private readonly IGenericBaseRepository<TodoDto> _repository;
-        private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        private readonly IMapper _mapper; 
 
-        public GetTodoRequestHandler(IGenericBaseRepository<TodoDto> repository, IMapper mapper, ILogger logger)
+        public GetTodoRequestHandler(IGenericBaseRepository<TodoDto> repository, IMapper mapper )
         {
             _repository = repository;
-            _mapper = mapper;
-            _logger = logger;
+            _mapper = mapper; 
         }
         public async Task<TodoDto> Handle(GetTodoRequest request, CancellationToken cancellationToken)
         {
@@ -35,8 +33,7 @@ namespace gym.Application.Commands.Todo.Handlers
             }
             catch (Exception ex)
             {
-                _logger.LogInformation(ex.Message);
-                return null;
+                throw new Exception(ex.Message);
             }
         }
     }

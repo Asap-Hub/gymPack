@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using gym.Application.Commands.Todo.Requests;
+using gym.Application.DTOs.TodoDtos;
+using gym.Application.Extentions.Exceptions;
 using gym.Application.Extentions.Responses;
 using gym.Application.Interfaces;
 using gym.Domain.Model;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,16 +21,22 @@ namespace gym.Application.Commands.Todo.Handlers
     {
         private readonly IGenericBaseRepository<TblMyTodo> _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        private readonly IValidator<CreateTodoDto> _validate;
 
-        public CreateTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, ILogger logger)
+        public CreateTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, IValidator<CreateTodoDto> validate )
         {
             _repository = repository;
             _mapper = mapper;
-            _logger = logger;
+            _validate = validate;
         }
         public async Task<int> Handle(CreateTodoCommand request, CancellationToken cancellationToken)
         {
+            var validateUser = await _validate.ValidateAsync(request.createDto);
+
+            if(!validateUser.IsValid)
+            {
+                throw new ValidException(validateUser);
+            }
             try
             {
                 var dto = request.createDto;
@@ -41,8 +51,8 @@ namespace gym.Application.Commands.Todo.Handlers
             }
             catch(Exception ex)
             {
-                _logger.LogInformation(ex.Message);
-                return 0;
+                throw new Exception(ex.Message);
+               
             }
         }
     }

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class verifyTwoFacAuthCommandHandler : IRequestHandler<verifyTwoFacAuthCommand, BaseResponse>
+    public class verifyTwoFacAuthCommandHandler : IRequestHandler<verifyTwoFacAuthCommand, IdentityBaseResponse>
     {
         private readonly SignInManager<User> _signInManager;
 
@@ -20,13 +20,13 @@ namespace gym.Application.Commands.AccountUser.Handlers
         {
             _signInManager = signInManager;
         }
-        public async Task<BaseResponse> Handle(verifyTwoFacAuthCommand request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(verifyTwoFacAuthCommand request, CancellationToken cancellationToken)
         {
             var verifyOTP = await _signInManager.TwoFactorSignInAsync("Email", request.SecurityCode, request.RememberMe, false);
 
-            if (verifyOTP != null)
+            if (verifyOTP.Succeeded)
             {
-                return new BaseResponse
+                return new IdentityBaseResponse
                 {
                     IsSuccess = true,
                     Message = "Validation Passed",
@@ -39,7 +39,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
             {
                 if (verifyOTP.IsLockedOut)
                 {
-                    return new BaseResponse
+                    return new IdentityBaseResponse
                     {
                         IsSuccess = verifyOTP.IsLockedOut,
                         Message = $"You are  {verifyOTP.IsLockedOut}"
@@ -47,7 +47,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
                 }
                 else
                 {
-                    return new BaseResponse
+                    return new IdentityBaseResponse
                     {
                         IsSuccess = false,
                         Message = "Failed to login", 

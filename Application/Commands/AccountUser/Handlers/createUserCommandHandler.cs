@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.IdentityCommand.Queries
 {
-    public class createUserCommandHandler : IRequestHandler<createUserCommandRequest, BaseResponse>
+    public class createUserCommandHandler : IRequestHandler<createUserCommandRequest, IdentityBaseResponse>
     {
         private readonly UserManager<User> _userManager;
         private readonly IEmailService _emailService; 
@@ -33,7 +33,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
         }
 
-        public async Task<BaseResponse> Handle(createUserCommandRequest request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(createUserCommandRequest request, CancellationToken cancellationToken)
         {
             var validateUser = await _validator.ValidateAsync(request.createDto);
 
@@ -85,7 +85,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
                 foreach (var error in createUser.Errors)
                 {
-                    return new BaseResponse
+                    return new IdentityBaseResponse
                     {
                         Message = "Error",
                         IsSuccess = false,
@@ -94,7 +94,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
                     //Console.WriteLine(error);
                 }
             }
-            return new BaseResponse {
+            return new IdentityBaseResponse {
                 Message = "Sucess",
                 IsSuccess = true
             };

@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using gym.Application.Commands.Todo.Requests;
+using gym.Application.DTOs.TodoDtos;
+using gym.Application.Extentions.Exceptions;
 using gym.Application.Interfaces;
 using gym.Domain.Model;
 using MediatR;
@@ -16,16 +19,23 @@ namespace gym.Application.Commands.Todo.Handlers
     {
         private readonly IGenericBaseRepository<TblMyTodo> _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        private readonly IValidator<UpdateTodoDto> _validator;
 
-        public UpdateTodoComandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, ILogger logger)
+        public UpdateTodoComandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, IValidator<UpdateTodoDto> validator)
         {
             _repository = repository;
             _mapper = mapper;
-            _logger = logger;
+            _validator = validator;
         }
         public async Task<Unit> Handle(UpdateTodoComand request, CancellationToken cancellationToken)
         {
+            var validateTodo = await _validator.ValidateAsync(request.updateDto);
+
+            if (!validateTodo.IsValid) 
+            {
+                throw new ValidException(validateTodo);
+            }
+
             try
             {
                 var dto = request.updateDto;
@@ -40,10 +50,8 @@ namespace gym.Application.Commands.Todo.Handlers
             }
             catch (Exception ex)
             {
-                 _logger.LogInformation(ex.Message);
-
-                return Unit.Value;
-                //throw new Exception(ex.Message);
+                throw new Exception(ex.Message);
+                 
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace gym.Application.Commands.IdentityCommand.Requests
 {
-    public class createUserCommandRequest : IRequest<BaseResponse>
+    public class createUserCommandRequest : IRequest<IdentityBaseResponse>
     {
         public CreateUserDto createDto { get; set; }
     }

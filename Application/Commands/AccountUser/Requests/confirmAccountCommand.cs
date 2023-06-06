@@ -6,7 +6,7 @@ using System.Text;
 
 namespace gym.Application.Commands.AccountUser.Requests
 {
-    public class ConfirmAccountCommand : IRequest<BaseResponse>
+    public class ConfirmAccountCommand : IRequest<IdentityBaseResponse>
     {
         public string userId { get; set;}
         public string Token { get; set;}
