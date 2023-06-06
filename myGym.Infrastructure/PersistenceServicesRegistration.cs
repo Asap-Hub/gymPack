@@ -10,7 +10,8 @@ using gym.Application.Interfaces;
 using gym.Application.Interfaces.Services;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Repositories;
-using gym.Infrastructure.Services.Email; 
+using gym.Infrastructure.Services.Email;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -27,7 +28,7 @@ namespace gym.Infrastructure
 {
     public static class PersistenceServicesRegistration
     {
-
+       
          //service for adding repositories
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {

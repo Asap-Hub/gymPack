@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9t+QFRQhV1bPVwS+TgAwTOxaI425D6nBWsFbXYNqPhmxZVogkHda7cggY5J1fxiHQxVALYnyU9Y4Gvcidr5DOw==",
+  "dgSpecHash": "BUtN1ivBG6MsLWomc/4erN9yWAX7wl6BRXEUYOFUEJ1LckPbT7ueQSquT66lKrx1aEc2YKOB+/BvTVEAaeCJxw==",
   "success": true,
   "projectFilePath": "D:\\Project\\myGym\\Application\\gym.Application.csproj",
   "expectedPackageFiles": [
@@ -9,9 +9,9 @@
     "C:\\Users\\ASAP\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.0\\fluentvalidation.aspnetcore.10.0.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.5\\fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\ASAP\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\microsoft.exchange.webservices.2.2.0.nupkg.sha512",
     "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

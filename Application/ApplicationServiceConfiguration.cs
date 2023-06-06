@@ -20,6 +20,7 @@ namespace gym.Application
 
             //services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(createUserCommandRequest).Assembly);
             //services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             services.AddControllers().AddFluentValidation();
             
 

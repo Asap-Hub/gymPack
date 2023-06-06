@@ -24,7 +24,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
         {
             var verifyOTP = await _signInManager.TwoFactorSignInAsync("Email", request.SecurityCode, request.RememberMe, false);
 
-            if (verifyOTP != null)
+            if (verifyOTP.Succeeded)
             {
                 return new BaseResponse
                 {

@@ -15,14 +15,12 @@ namespace gym.Application.Commands.Todo.Handlers
     public class UpdateTodoComandHandler : IRequestHandler<UpdateTodoComand, Unit>
     {
         private readonly IGenericBaseRepository<TblMyTodo> _repository;
-        private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        private readonly IMapper _mapper; 
 
-        public UpdateTodoComandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, ILogger logger)
+        public UpdateTodoComandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper)
         {
             _repository = repository;
-            _mapper = mapper;
-            _logger = logger;
+            _mapper = mapper; 
         }
         public async Task<Unit> Handle(UpdateTodoComand request, CancellationToken cancellationToken)
         {
@@ -40,10 +38,8 @@ namespace gym.Application.Commands.Todo.Handlers
             }
             catch (Exception ex)
             {
-                 _logger.LogInformation(ex.Message);
-
-                return Unit.Value;
-                //throw new Exception(ex.Message);
+                throw new Exception(ex.Message);
+                 
             }
         }
     }

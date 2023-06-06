@@ -48,11 +48,12 @@ namespace Gym
 
 
             //registering mediatR
-            services.AddMediatR(typeof(Startup));
+            //services.AddMediatR(typeof(Startup));
 
             //ApplicationServicesRegistration
+            //services.ConfigureApplicationServices();
             services.ConfigureApplicationServices();
-            
+
             //handing application database
             services.ApplicationDbContextConfiguration(this.Configuration);
  

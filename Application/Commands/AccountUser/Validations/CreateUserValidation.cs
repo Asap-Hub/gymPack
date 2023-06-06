@@ -17,7 +17,7 @@ namespace gym.Application.Commands.user.Validations
             RuleFor(x => x.Email)
            .NotEmpty().WithMessage("Email is required.")
            .EmailAddress().WithMessage("Invalid email address.")
-           .Asapt(email => email.Contains("@")).WithMessage("Email Asapt contain the @ sign.");
+           .Must(email => email.Contains("@")).WithMessage("Email Must contain the @ sign.");
              
             RuleFor(x => x.Password)
            .NotEmpty().WithMessage("Password is required.")

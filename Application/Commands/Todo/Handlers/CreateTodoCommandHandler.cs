@@ -17,13 +17,12 @@ namespace gym.Application.Commands.Todo.Handlers
     {
         private readonly IGenericBaseRepository<TblMyTodo> _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        //private readonly ILogger _logger;
 
-        public CreateTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, ILogger logger)
+        public CreateTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper )
         {
             _repository = repository;
-            _mapper = mapper;
-            _logger = logger;
+            _mapper = mapper; 
         }
         public async Task<int> Handle(CreateTodoCommand request, CancellationToken cancellationToken)
         {
@@ -41,8 +40,8 @@ namespace gym.Application.Commands.Todo.Handlers
             }
             catch(Exception ex)
             {
-                _logger.LogInformation(ex.Message);
-                return 0;
+                throw new Exception(ex.Message);
+               
             }
         }
     }

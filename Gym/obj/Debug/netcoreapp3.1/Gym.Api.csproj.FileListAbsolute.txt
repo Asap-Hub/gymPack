@@ -13,7 +13,6 @@ D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\MediatR.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\MediatR.Contracts.dll
-D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -175,3 +174,4 @@ D:\Asap\Public\Backend\gymPack\Gym\obj\Debug\netcoreapp3.1\gym.Api.csproj.CopyCo
 D:\Asap\Public\Backend\gymPack\Gym\obj\Debug\netcoreapp3.1\gym.Api.dll
 D:\Asap\Public\Backend\gymPack\Gym\obj\Debug\netcoreapp3.1\gym.Api.pdb
 D:\Asap\Public\Backend\gymPack\Gym\obj\Debug\netcoreapp3.1\gym.Api.genruntimeconfig.cache
+D:\Project\myGym\Gym\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

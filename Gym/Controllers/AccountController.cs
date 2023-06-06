@@ -33,7 +33,7 @@ namespace gym.Api.Controllers
                 createDto = createDto
             });
 
-            if(createUser != null)
+            if(createUser.IsSuccess)
             { 
                 return CreatedAtRoute("ConfirmAccount", 
                     new BaseResponse
@@ -60,7 +60,7 @@ namespace gym.Api.Controllers
             }
 
             var confirmAccount = await _mediator.Send(new ConfirmAccountCommand { userId = userId, Token = Token });
-            if (confirmAccount != null)
+            if (confirmAccount.IsSuccess)
             {
                 return Ok(new BaseResponse {
                     IsSuccess = true,
@@ -86,7 +86,7 @@ namespace gym.Api.Controllers
             }
 
             var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthRequest {Email = Email, RememberMe = RememberMe });
-            if(signInWith2Fac != null)
+            if(signInWith2Fac.IsSuccess)
             {
                 return Ok(new BaseResponse { 
                 IsSuccess = true,
@@ -97,7 +97,7 @@ namespace gym.Api.Controllers
             return BadRequest(new BaseResponse
             {
                 IsSuccess = false,
-                statusCode = StatusCodes.Status200OK,
+                statusCode = StatusCodes.Status400BadRequest,
             });
         }
 
@@ -111,7 +111,7 @@ namespace gym.Api.Controllers
 
             var verifyMyOTP = await _mediator.Send(new verifyTwoFacAuthCommand { SecurityCode = SecurityCode, RememberMe = RememberMe });
 
-            if(verifyMyOTP != null)
+            if(verifyMyOTP.IsSuccess)
             {
                 return Ok(new BaseResponse
                 {
@@ -120,7 +120,7 @@ namespace gym.Api.Controllers
                 });
             }
 
-            return Ok(new BaseResponse
+            return BadRequest(new BaseResponse
             {
                 IsSuccess = true,
                 statusCode = StatusCodes.Status400BadRequest,
@@ -138,7 +138,7 @@ namespace gym.Api.Controllers
 
             var signOut = await _mediator.Send(new signUserOutCommand {Email = Email });
 
-            if (signOut != null)
+            if (signOut.IsSuccess)
             {
                 return Ok(new BaseResponse
                 {
@@ -148,10 +148,10 @@ namespace gym.Api.Controllers
             }
             else
             {
-                return Ok(new BaseResponse
+                return BadRequest(new BaseResponse
                 {
                     IsSuccess = true,
-                    statusCode = StatusCodes.Status200OK,
+                    statusCode = StatusCodes.Status400BadRequest,
                 });
             }
         }
