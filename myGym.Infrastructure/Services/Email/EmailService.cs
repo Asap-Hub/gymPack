@@ -5,9 +5,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using gym.Application.Interfaces.Services;
-using MailKit.Security;
-using MimeKit;
+using gym.Application.Interfaces.Services; 
 
 namespace gym.Infrastructure.Services.Email
 {
