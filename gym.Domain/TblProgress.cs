@@ -6,7 +6,8 @@ namespace gym.Domain.Model
 {
 
     public partial class TblProgress: BaseDomain
-    { 
+    {
+        public int ProgressId { get; set; }
         public string Status { get; set; } = null!;
         public int Percentage { get; set; }
         public bool Completed { get; set; }

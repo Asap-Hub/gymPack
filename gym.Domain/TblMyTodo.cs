@@ -9,14 +9,15 @@ namespace gym.Domain.Model
 {
     public partial class TblMyTodo : BaseDomain
     {
-
+        public int TodoId { get; set; }
         public string Title { get; set; }
 
         public string Note { get; set; }
 
         public DateTime? StartDate { get; set; }
 
-        public DateTime? EndDate { get; set; } 
+        public DateTime? EndDate { get; set; }
+        public int ProgressId { get; set; }
 
     }
 }

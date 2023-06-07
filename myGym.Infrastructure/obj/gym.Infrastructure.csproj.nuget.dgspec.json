@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asap\\Public\\Backend\\gymPack\\myGym.Infrastructure\\gym.Infrastructure.csproj": {}
+    "D:\\Project\\myGym\\myGym.Infrastructure\\gym.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Asap\\Public\\Backend\\gymPack\\Application\\gym.Application.csproj": {
+    "D:\\Project\\myGym\\Application\\gym.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asap\\Public\\Backend\\gymPack\\Application\\gym.Application.csproj",
+        "projectUniqueName": "D:\\Project\\myGym\\Application\\gym.Application.csproj",
         "projectName": "gym.Application",
-        "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\Application\\gym.Application.csproj",
-        "packagesPath": "C:\\Users\\abdallah.mustapha\\.nuget\\packages\\",
-        "outputPath": "D:\\Asap\\Public\\Backend\\gymPack\\Application\\obj\\",
+        "projectPath": "D:\\Project\\myGym\\Application\\gym.Application.csproj",
+        "packagesPath": "C:\\Users\\ASAP\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\myGym\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abdallah.mustapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\ASAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,16 +25,16 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj": {
-                "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj"
+              "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj": {
+                "projectPath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj"
               }
             }
           }
@@ -71,6 +69,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -98,26 +100,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj": {
+    "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj",
+        "projectUniqueName": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
         "projectName": "gym.Domain",
-        "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj",
-        "packagesPath": "C:\\Users\\abdallah.mustapha\\.nuget\\packages\\",
-        "outputPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\obj\\",
+        "projectPath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
+        "packagesPath": "C:\\Users\\ASAP\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\myGym\\gym.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abdallah.mustapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\ASAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -125,8 +125,8 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -166,26 +166,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Asap\\Public\\Backend\\gymPack\\myGym.Infrastructure\\gym.Infrastructure.csproj": {
+    "D:\\Project\\myGym\\myGym.Infrastructure\\gym.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asap\\Public\\Backend\\gymPack\\myGym.Infrastructure\\gym.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Project\\myGym\\myGym.Infrastructure\\gym.Infrastructure.csproj",
         "projectName": "gym.Infrastructure",
-        "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\myGym.Infrastructure\\gym.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\abdallah.mustapha\\.nuget\\packages\\",
-        "outputPath": "D:\\Asap\\Public\\Backend\\gymPack\\myGym.Infrastructure\\obj\\",
+        "projectPath": "D:\\Project\\myGym\\myGym.Infrastructure\\gym.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ASAP\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\myGym\\myGym.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abdallah.mustapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\ASAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -193,19 +191,19 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Asap\\Public\\Backend\\gymPack\\Application\\gym.Application.csproj": {
-                "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\Application\\gym.Application.csproj"
+              "D:\\Project\\myGym\\Application\\gym.Application.csproj": {
+                "projectPath": "D:\\Project\\myGym\\Application\\gym.Application.csproj"
               },
-              "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj": {
-                "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj"
+              "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj": {
+                "projectPath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj"
               }
             }
           }
@@ -283,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

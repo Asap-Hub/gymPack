@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj": {}
+    "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj": {
+    "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj",
+        "projectUniqueName": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
         "projectName": "gym.Domain",
-        "projectPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj",
-        "packagesPath": "C:\\Users\\abdallah.mustapha\\.nuget\\packages\\",
-        "outputPath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\obj\\",
+        "projectPath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
+        "packagesPath": "C:\\Users\\ASAP\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\myGym\\gym.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abdallah.mustapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\ASAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,8 +25,8 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

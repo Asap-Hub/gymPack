@@ -5,8 +5,9 @@ using System.Text;
 
 namespace gym.Application.DTOs.TodoDtos
 {
-    public class UpdateTodoDto : BaseIdDto
+    public class UpdateTodoDto : BaseDto
     {
+        public int TodoId { get; set; }
         public string Title { get; set; }
 
         public string Note { get; set; }

@@ -5,8 +5,9 @@ using System.Text;
 
 namespace gym.Application.DTOs.ProgressDtos
 {
-    public class UpdateProgressDto : BaseIdDto
+    public class UpdateProgressDto : BaseDto
     {
+        public int ProgressId { get; set; }
         public string Status { get; set; } = null!;
         public int Percentage { get; set; }
         public bool Completed { get; set; }
