@@ -8,7 +8,7 @@ using gym.Application.DTOs.Identity;
 using gym.Application.DTOs.TodoDtos;
 using gym.Application.Extentions.Exceptions;
 using gym.Application.Extentions.IdentityExtension;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using gym.Application.Interfaces.Services;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Repositories;
@@ -22,7 +22,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System; 
+using System;
 using System.Reflection;
 using System.Text;
 
@@ -37,6 +37,9 @@ namespace gym.Infrastructure
             services.AddScoped(typeof(IGenericBaseRepository<>), typeof(GenericBaseRepository<>));
             services.AddTransient<IEmailService, EmailService>(); 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddSingleton<IProgressRepository, ProgressRepository>();   
+            services.AddSingleton<ITodoRepository, TodoRepository>();
+
             services.AddScoped(x =>
             {
                 var actionContext = x.GetRequiredService<IActionContextAccessor>().ActionContext;

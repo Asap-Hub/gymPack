@@ -4,7 +4,7 @@ using gym.Application.Commands.Todo.Requests;
 using gym.Application.DTOs.TodoDtos;
 using gym.Application.Extentions.Exceptions;
 using gym.Application.Extentions.Responses;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using gym.Domain.Model;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -19,11 +19,11 @@ namespace gym.Application.Commands.Todo.Handlers
 {
     public class CreateTodoCommandHandler : IRequestHandler<CreateTodoCommand, int>
     {
-        private readonly IGenericBaseRepository<TblMyTodo> _repository;
+        private readonly ITodoRepository _repository;
         private readonly IMapper _mapper;
         private readonly IValidator<CreateTodoDto> _validate;
 
-        public CreateTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, IValidator<CreateTodoDto> validate )
+        public CreateTodoCommandHandler(ITodoRepository repository, IMapper mapper, IValidator<CreateTodoDto> validate )
         {
             _repository = repository;
             _mapper = mapper;

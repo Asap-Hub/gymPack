@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using gym.Application.Commands.Progress.Requests;
 using gym.Application.DTOs.ProgressDtos;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using gym.Domain.Model;
 using MediatR;
 using System;
@@ -14,10 +14,10 @@ namespace gym.Application.Commands.Progress.Handlers
 {
     public class GetAllProgressCommandHandler : IRequestHandler<GetAllProgressCommand, List<ProgressDto>>
     {
-        private readonly IGenericBaseRepository<TblProgress> _repository;
+        private readonly IProgressRepository _repository;
         private readonly IMapper _mapper;
 
-        public GetAllProgressCommandHandler(IGenericBaseRepository<TblProgress> repository, IMapper mapper)
+        public GetAllProgressCommandHandler(IProgressRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;

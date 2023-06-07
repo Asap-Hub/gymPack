@@ -5,11 +5,13 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gym.Api", "Gym\gym.Api.csproj", "{1DE08F1A-D9EF-4728-AEBB-A14FED590049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym.Application", "Application\gym.Application.csproj", "{11B13355-662D-4C08-B06B-588F7A68CB19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gym.Application", "Application\gym.Application.csproj", "{11B13355-662D-4C08-B06B-588F7A68CB19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym.Infrastructure", "myGym.Infrastructure\gym.Infrastructure.csproj", "{6E3F151B-CAFC-4CFB-9544-3DCA7A26C215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gym.Infrastructure", "myGym.Infrastructure\gym.Infrastructure.csproj", "{6E3F151B-CAFC-4CFB-9544-3DCA7A26C215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym.Domain", "gym.Domain\gym.Domain.csproj", "{32AE5B32-D3C8-473B-8F5F-B18B45D4CA40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gym.Domain", "gym.Domain\gym.Domain.csproj", "{32AE5B32-D3C8-473B-8F5F-B18B45D4CA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym.Test", "Gym.Test\Gym.Test.csproj", "{A89F0107-B202-45A9-B421-60EAD147E129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{32AE5B32-D3C8-473B-8F5F-B18B45D4CA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32AE5B32-D3C8-473B-8F5F-B18B45D4CA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32AE5B32-D3C8-473B-8F5F-B18B45D4CA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89F0107-B202-45A9-B421-60EAD147E129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89F0107-B202-45A9-B421-60EAD147E129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89F0107-B202-45A9-B421-60EAD147E129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89F0107-B202-45A9-B421-60EAD147E129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using gym.Application.Commands.Todo.Requests;
 using gym.Application.DTOs.TodoDtos;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,10 +14,10 @@ namespace gym.Application.Commands.Todo.Handlers
 {
     public class GetTodoRequestHandler : IRequestHandler<GetTodoRequest, TodoDto>
     {
-        private readonly IGenericBaseRepository<TodoDto> _repository;
+        private readonly ITodoRepository _repository;
         private readonly IMapper _mapper; 
 
-        public GetTodoRequestHandler(IGenericBaseRepository<TodoDto> repository, IMapper mapper )
+        public GetTodoRequestHandler(ITodoRepository repository, IMapper mapper )
         {
             _repository = repository;
             _mapper = mapper; 

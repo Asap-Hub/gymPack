@@ -1,4 +1,4 @@
-﻿using gym.Application.Interfaces;
+﻿using gym.Application.Interfaces.Repositories;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,7 +32,7 @@ namespace gym.Infrastructure.Persistances.Repositories
             return result;
         }
 
-        public async Task<IReadOnlyList<TEntity>> findAllAsync(FormattableString sqlQuery)
+        public async Task<List<TEntity>> findAllAsync(FormattableString sqlQuery)
         {
             List<TEntity> result = await _dbContext.Set<TEntity>().FromSqlInterpolated(sqlQuery).AsNoTracking().ToListAsync();
 

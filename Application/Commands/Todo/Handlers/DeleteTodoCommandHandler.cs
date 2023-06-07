@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using gym.Application.Commands.Todo.Requests;
 using gym.Application.Extentions.Exceptions;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using gym.Domain.Model;
 using MediatR;
 using System;
@@ -14,9 +14,9 @@ namespace gym.Application.Commands.Todo.Handlers
 {
     public class DeleteTodoCommandHandler : IRequestHandler<DeleteTodoCommand, int>
     {
-        private readonly IGenericBaseRepository<TblMyTodo> _repository; 
+        private readonly ITodoRepository _repository; 
 
-        public DeleteTodoCommandHandler(IGenericBaseRepository<TblMyTodo> repository )
+        public DeleteTodoCommandHandler(ITodoRepository repository )
         {
             _repository = repository; 
         }

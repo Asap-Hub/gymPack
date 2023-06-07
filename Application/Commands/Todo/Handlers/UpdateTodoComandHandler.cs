@@ -3,7 +3,7 @@ using FluentValidation;
 using gym.Application.Commands.Todo.Requests;
 using gym.Application.DTOs.TodoDtos;
 using gym.Application.Extentions.Exceptions;
-using gym.Application.Interfaces;
+using gym.Application.Interfaces.Repositories;
 using gym.Domain.Model;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -17,11 +17,11 @@ namespace gym.Application.Commands.Todo.Handlers
 {
     public class UpdateTodoComandHandler : IRequestHandler<UpdateTodoComand, Unit>
     {
-        private readonly IGenericBaseRepository<TblMyTodo> _repository;
+        private readonly ITodoRepository _repository;
         private readonly IMapper _mapper;
         private readonly IValidator<UpdateTodoDto> _validator;
 
-        public UpdateTodoComandHandler(IGenericBaseRepository<TblMyTodo> repository, IMapper mapper, IValidator<UpdateTodoDto> validator)
+        public UpdateTodoComandHandler(ITodoRepository repository, IMapper mapper, IValidator<UpdateTodoDto> validator)
         {
             _repository = repository;
             _mapper = mapper;

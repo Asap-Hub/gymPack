@@ -21,7 +21,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
         private readonly UserManager<User> _userManager;
         private readonly IEmailService _emailService; 
         private readonly IValidator<CreateUserDto> _validator;
-        private readonly IUrlHelper urlHelper;
+        private readonly IUrlHelper _urlHelper;
          
 
         public createUserCommandHandler(UserManager<User> userManager, IEmailService emailService, IUrlHelperFactory urlHelperFactory, IValidator<CreateUserDto> validator, IUrlHelper urlHelper )
@@ -29,7 +29,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
             _userManager = userManager;
             _emailService = emailService; 
             _validator = validator;
-            this.urlHelper=urlHelper;
+            _urlHelper = urlHelper;
 
         }
 
@@ -64,7 +64,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
 
 
-                var verificationLink = urlHelper.PageLink(pageName: "/ConfirmAccount",
+                var verificationLink = _urlHelper.PageLink(pageName: "/ConfirmAccount",
                             values: new
                             {
                                 User = dto.Id,
@@ -80,8 +80,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
             }
 
             else
-            {
-                //throw new ValidException(validateUser);
+            { 
 
                 foreach (var error in createUser.Errors)
                 {
@@ -90,8 +89,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
                         Message = "Error",
                         IsSuccess = false,
                         Errors = error,
-                    };
-                    //Console.WriteLine(error);
+                    }; 
                 }
             }
             return new IdentityBaseResponse {
