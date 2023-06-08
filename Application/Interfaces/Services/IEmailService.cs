@@ -7,6 +7,6 @@ namespace gym.Application.Interfaces.Services
 {
     public interface IEmailService
     {
-        Task sendEmailAsync(string from, string to, string subject, string body);
+        Task SendEmailAsync(string from, string to, string subject, string body);
     }
 }

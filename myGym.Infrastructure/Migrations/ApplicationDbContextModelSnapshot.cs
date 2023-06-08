@@ -223,7 +223,7 @@ namespace gym.Infrastructure.Migrations
 
             modelBuilder.Entity("gym.Domain.Model.TblMyTodo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TodoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -246,82 +246,90 @@ namespace gym.Infrastructure.Migrations
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProgressId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("TodoId");
 
                     b.ToTable("tblMyTodo");
 
                     b.HasData(
                         new
                         {
-                            Id = 2,
+                            TodoId = 1,
                             CreatedBy = "Instructor Malik",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4187),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2003),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4200),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7765),
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1933),
                             Note = "finish hard",
-                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(2634),
+                            ProgressId = 0,
+                            StartDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(6417),
                             Title = "task 1"
                         },
                         new
                         {
-                            Id = 3,
+                            TodoId = 2,
                             CreatedBy = "Instructor Malik",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4305),
+                            CreatedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7874),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4307),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7877),
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2006),
                             Note = "finish hard",
-                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4271),
+                            ProgressId = 0,
+                            StartDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7842),
                             Title = "task 2"
                         },
                         new
                         {
-                            Id = 4,
+                            TodoId = 3,
                             CreatedBy = "Instructor Malik",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4312),
+                            CreatedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7883),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4314),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7885),
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2003),
                             Note = "finish hard",
-                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4310),
+                            ProgressId = 0,
+                            StartDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7881),
                             Title = "task 3"
                         },
                         new
                         {
-                            Id = 5,
+                            TodoId = 4,
                             CreatedBy = "Instructor Malik",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4320),
+                            CreatedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7890),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4322),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7892),
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1997),
                             Note = "finish hard",
-                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4317),
+                            ProgressId = 0,
+                            StartDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7888),
                             Title = "task 4"
                         },
                         new
                         {
-                            Id = 6,
+                            TodoId = 5,
                             CreatedBy = "Instructor Malik",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4326),
+                            CreatedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7897),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4328),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7899),
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1995),
                             Note = "finish hard",
-                            StartDate = new DateTime(2023, 6, 6, 0, 35, 29, 792, DateTimeKind.Local).AddTicks(4324),
+                            ProgressId = 0,
+                            StartDate = new DateTime(2023, 6, 7, 20, 12, 58, 800, DateTimeKind.Local).AddTicks(7894),
                             Title = "task 5"
                         });
                 });
 
             modelBuilder.Entity("gym.Domain.Model.TblProgress", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProgressId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -353,73 +361,73 @@ namespace gym.Infrastructure.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProgressId");
 
                     b.ToTable("tblProgress");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            ProgressId = 1,
                             Completed = false,
                             Confirmed = false,
                             ConfirmedBy = "Instructor Malik",
                             CreatedBy = "Asap",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 785, DateTimeKind.Local).AddTicks(3339),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2003),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(5666),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 795, DateTimeKind.Local).AddTicks(7055),
                             Percentage = 0,
                             Status = "pending"
                         },
                         new
                         {
-                            Id = 2,
+                            ProgressId = 2,
                             Completed = true,
                             Confirmed = false,
                             ConfirmedBy = "Instructor Malik",
                             CreatedBy = "Asap",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6649),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1992),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6691),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 797, DateTimeKind.Local).AddTicks(1926),
                             Percentage = 100,
                             Status = "done"
                         },
                         new
                         {
-                            Id = 3,
+                            ProgressId = 3,
                             Completed = true,
                             Confirmed = true,
                             ConfirmedBy = "Instructor Malik",
                             CreatedBy = "Asap",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6719),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2002),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6722),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 797, DateTimeKind.Local).AddTicks(1996),
                             Percentage = 100,
                             Status = "done"
                         },
                         new
                         {
-                            Id = 4,
+                            ProgressId = 4,
                             Completed = false,
                             Confirmed = false,
                             ConfirmedBy = "Instructor Malik",
                             CreatedBy = "Asap",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6725),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2002),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6727),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 797, DateTimeKind.Local).AddTicks(2002),
                             Percentage = 0,
                             Status = "pending"
                         },
                         new
                         {
-                            Id = 5,
+                            ProgressId = 5,
                             Completed = false,
                             Confirmed = true,
                             ConfirmedBy = "Instructor Malik",
                             CreatedBy = "Asap",
-                            CreatedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6730),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1993),
                             EdittedBy = "Asap",
-                            EdittedDate = new DateTime(2023, 6, 6, 0, 35, 29, 787, DateTimeKind.Local).AddTicks(6733),
+                            EdittedDate = new DateTime(2023, 6, 7, 20, 12, 58, 797, DateTimeKind.Local).AddTicks(2006),
                             Percentage = 50,
                             Status = "progress"
                         });

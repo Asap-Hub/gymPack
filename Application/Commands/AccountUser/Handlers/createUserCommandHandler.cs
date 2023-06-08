@@ -72,7 +72,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
                             }
                    );
 
-                await _emailService.sendEmailAsync("asaphub01@gmail.com",
+                await _emailService.SendEmailAsync("abdollahsuper@gmail.com",
                     dto.Email!,
                     "Please confirm your email",
                     $"Click on the link in the email we sent to :{verificationLink} to verify your account"

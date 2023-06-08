@@ -70,7 +70,7 @@ namespace gym.Api.Controllers.Todo
                 {
                     return Ok(new IdentityBaseResponse
                     {
-                        Id = updateDto.Id,
+                        Id = updateDto.TodoId,
                         IsSuccess = true,
                         statusCode = StatusCodes.Status201Created
 
@@ -104,14 +104,14 @@ namespace gym.Api.Controllers.Todo
             {
                 return Ok(new IdentityBaseResponse
                 { 
-                    Id = getUser.Id,
+                    Id = getUser.TodoId,
                     IsSuccess = true,
                     statusCode = StatusCodes.Status200OK,
                 });
             }
             return BadRequest(new IdentityBaseResponse
             {
-                Id = getUser.Id,
+                Id = getUser.TodoId,
                 IsSuccess = false,
                 statusCode = StatusCodes.Status200OK,
             });

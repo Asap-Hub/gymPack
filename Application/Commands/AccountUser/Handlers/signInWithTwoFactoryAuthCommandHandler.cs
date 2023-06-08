@@ -23,7 +23,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
             _userManager = userManager;
             _emailService = emailService;
         }
-        public EmailMFA EmailMFA { get; set; }
+ 
         public async Task<IdentityBaseResponse> Handle(signInWithTwoFactoryAuthRequest request, CancellationToken cancellationToken)
         {
             var findUser = await _userManager.FindByEmailAsync(request.Email);
@@ -35,8 +35,8 @@ namespace gym.Application.Commands.AccountUser.Handlers
                 var getSecurityCode = await _userManager.GenerateTwoFactorTokenAsync(findUser, "Email");
                 if(getSecurityCode != null)
                 {
-                    await _emailService.sendEmailAsync(
-                        "asaphub01@gmail.com",
+                    await _emailService.SendEmailAsync(
+                        "abdollahsuper@gmail.com",
                         request.Email,
                         "Your Gym OTP Code",
                         $"use this otp to login into your app.{getSecurityCode}"

@@ -37,8 +37,8 @@ namespace gym.Infrastructure
             services.AddScoped(typeof(IGenericBaseRepository<>), typeof(GenericBaseRepository<>));
             services.AddTransient<IEmailService, EmailService>(); 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-            services.AddSingleton<IProgressRepository, ProgressRepository>();   
-            services.AddSingleton<ITodoRepository, TodoRepository>();
+            services.AddTransient<IProgressRepository, ProgressRepository>();   
+            services.AddTransient<ITodoRepository, TodoRepository>();
 
             services.AddScoped(x =>
             {

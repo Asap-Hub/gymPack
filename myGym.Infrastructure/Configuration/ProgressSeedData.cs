@@ -14,14 +14,14 @@ namespace gym.Infrastructure.Configuration
             builder.HasData
                 (
 
-                new TblProgress { Id = 1, Status = "pending", Percentage = 0, Completed = false, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = DateTime.Now, EdittedBy = "Asap", EdittedDate = DateTime.Now }, 
-                new TblProgress { Id = 2, Status = "done", Percentage = 100, Completed = true, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = DateTime.Now, EdittedBy = "Asap", EdittedDate = DateTime.Now },
+                new TblProgress { ProgressId = 1, Status = "pending", Percentage = 0, Completed = false, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = new DateTime(2023-02-18), EdittedBy = "Asap", EdittedDate = DateTime.Now }, 
+                new TblProgress { ProgressId = 2, Status = "done", Percentage = 100, Completed = true, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = new DateTime(2023-03-28), EdittedBy = "Asap", EdittedDate = DateTime.Now },
 
-                new TblProgress { Id = 3, Status = "done", Percentage = 100, Completed = true, Confirmed = true, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = DateTime.Now, EdittedBy = "Asap", EdittedDate = DateTime.Now },
+                new TblProgress { ProgressId = 3, Status = "done", Percentage = 100, Completed = true, Confirmed = true, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = new DateTime(2023-03-18), EdittedBy = "Asap", EdittedDate = DateTime.Now },
 
-                new TblProgress { Id = 4, Status = "pending", Percentage = 0, Completed = false, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = DateTime.Now, EdittedBy = "Asap", EdittedDate = DateTime.Now },
+                new TblProgress { ProgressId = 4, Status = "pending", Percentage = 0, Completed = false, Confirmed = false, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = new DateTime(2023-03-18), EdittedBy = "Asap", EdittedDate = DateTime.Now },
 
-                new TblProgress { Id = 5, Status = "progress", Percentage = 50, Completed = false, Confirmed = true, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = DateTime.Now, EdittedBy = "Asap", EdittedDate = DateTime.Now }
+                new TblProgress { ProgressId = 5, Status = "progress", Percentage = 50, Completed = false, Confirmed = true, ConfirmedBy = "Instructor Malik", CreatedBy = "Asap", CreatedDate = new DateTime(2023-02-28), EdittedBy = "Asap", EdittedDate = DateTime.Now }
 
 
                 ) ;

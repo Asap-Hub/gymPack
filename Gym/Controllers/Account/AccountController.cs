@@ -81,7 +81,7 @@ namespace gym.Api.Controllers.Account
 
 
         [HttpGet]
-        public async Task<IActionResult> signInWithTwoFactoryAuth(string Email, bool RememberMe)
+        public async Task<IActionResult> LogInWithTwoFactoryCode(string Email, bool RememberMe)
         {
             if (!ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace gym.Api.Controllers.Account
             }
 
             var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthRequest { Email = Email, RememberMe = RememberMe });
-            if (signInWith2Fac.IsSuccess)
+            if (signInWith2Fac != null)
             {
                 return Ok(new IdentityBaseResponse
                 {
@@ -98,11 +98,14 @@ namespace gym.Api.Controllers.Account
                 });
             }
 
-            return BadRequest(new IdentityBaseResponse
+            else
             {
-                IsSuccess = false,
-                statusCode = StatusCodes.Status400BadRequest,
-            });
+                return BadRequest(new IdentityBaseResponse
+                {
+                    IsSuccess = false,
+                    statusCode = StatusCodes.Status400BadRequest,
+                });
+            }
         }
 
         [HttpPost]
@@ -126,7 +129,7 @@ namespace gym.Api.Controllers.Account
 
             return BadRequest(new IdentityBaseResponse
             {
-                IsSuccess = true,
+                IsSuccess = false,
                 statusCode = StatusCodes.Status400BadRequest,
             });
 
@@ -154,7 +157,7 @@ namespace gym.Api.Controllers.Account
             {
                 return BadRequest(new IdentityBaseResponse
                 {
-                    IsSuccess = true,
+                    IsSuccess = false,
                     statusCode = StatusCodes.Status400BadRequest,
                 });
             }

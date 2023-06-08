@@ -32,7 +32,7 @@ namespace gym.Infrastructure.Persistances.ApplicationDBContext
             modelBuilder.Entity<TblMyTodo>(
                 entity =>
                 {
-                    entity.HasKey(entity => entity.Id);
+                    entity.HasKey(entity => entity.TodoId);
                     entity.ToTable("tblMyTodo");
                 }
                 );
@@ -41,7 +41,7 @@ namespace gym.Infrastructure.Persistances.ApplicationDBContext
             modelBuilder.Entity<TblProgress>(
                 entity => 
                 { 
-                    entity.HasKey(entity => entity.Id);
+                    entity.HasKey(entity => entity.ProgressId);
                     entity.ToTable("tblProgress");
                 }
                 );

@@ -17,12 +17,13 @@ namespace gym.Infrastructure.Services.Email
         {
             _smtpSettings = smtpSettings;
         }
-        public async Task sendEmailAsync(string from, string to, string subject, string body)
+        public async Task SendEmailAsync(string from, string to, string subject, string body)
         {
             var message = new MailMessage(from, to, subject, body);
 
             using (var emailClient = new SmtpClient(_smtpSettings.Value.Host, _smtpSettings.Value.Port))
             {
+                emailClient.EnableSsl = true;
                 emailClient.Credentials = new NetworkCredential(
                     _smtpSettings.Value.User,
                     _smtpSettings.Value.Password
@@ -30,8 +31,32 @@ namespace gym.Infrastructure.Services.Email
 
                 await emailClient.SendMailAsync(message);
             }
+
+            //MailMessage mailMessage = new MailMessage();
+            //mailMessage.From = new MailAddress(from);
+            //mailMessage.To.Add(new MailAddress(to));
+
+            //mailMessage.Subject = "Two Factor Code";
+            //mailMessage.IsBodyHtml = true;
+            //mailMessage.Body = body;
+
+            //SmtpClient client = new SmtpClient();
+            //client.Credentials = new System.Net.NetworkCredential(_smtpSettings.Value.User, _smtpSettings.Value.Password);
+            //client.Host = _smtpSettings.Value.Host;
+            //client.Port = _smtpSettings.Value.Port;
+
+            //try
+            //{
+            //    client.Send(mailMessage);
+            //    return true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    // log exception
+            //}
+            //return false;
         }
 
-
+       
     }
 }

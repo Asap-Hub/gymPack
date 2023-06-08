@@ -19,7 +19,7 @@ namespace Gym.Test.Mock
             var todoData = new List<TblMyTodo>
             {
                 new TblMyTodo {
-                    Id = 1, 
+                    TodoId = 1, 
                     Title = "task 2",
                     Note = "finish hard 2",
                     StartDate = DateTime.Now,
@@ -28,7 +28,7 @@ namespace Gym.Test.Mock
                     EdittedBy = "Asap", 
                 },
                  new TblMyTodo {
-                    Id = 2,
+                    TodoId = 2,
                     Title = "task 1",
                     Note = "finish hard",
                     StartDate = DateTime.Now,

@@ -71,7 +71,7 @@ namespace gym.Api.Controllers.Progress
                 {
                     return Ok(new BaseResponse
                     { 
-                    Id = getProgress.Id,
+                    Id = getProgress.ProgressId,
                     issuccess = true,
                     Status = StatusCodes.Status202Accepted
                     });
@@ -79,7 +79,7 @@ namespace gym.Api.Controllers.Progress
             }
             return BadRequest(new BaseResponse
             {
-                Id = getProgress.Id,
+                Id = getProgress.ProgressId,
                 issuccess = false,
                 Status = StatusCodes.Status400BadRequest
             });
@@ -101,7 +101,7 @@ namespace gym.Api.Controllers.Progress
             {
                 return Ok(new BaseResponse
                 {
-                    Id = getProgress.Id,
+                    Id = getProgress.ProgressId,
                     issuccess = true,
                     Status = StatusCodes.Status200OK
                 });
@@ -109,9 +109,9 @@ namespace gym.Api.Controllers.Progress
             }
             return BadRequest(new BaseResponse
             {
-                Id = getProgress.Id,
+                Id = getProgress.ProgressId,
                 issuccess = false,
-                Message = $"Progress Tracker with {getProgress.Id} was not found",
+                Message = $"Progress Tracker with {getProgress.ProgressId} was not found",
                 Status = StatusCodes.Status404NotFound
             });
         }
