@@ -11,7 +11,7 @@ namespace gym.Application.Mappers.Identity
     {
         public UserMapper()
         {
-            CreateMap<CreateUserDto, User>().ReverseMap();
+            CreateMap<CreateUserDto, User>().ReverseMap(); 
         }
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SmUICDjiS8Pje1a8A11KjABjWdCpjn3/XyvZw/AZzwozUW3v9JC90Y2Wsk5HlgXONbocdh+QcRtEKBXxo89VNg==",
+  "dgSpecHash": "Wvb7XkO6SeJynx5iAxW0N3ThSqt7Y9dZeAt4tksKc8UVE/pAWDs3M1SvyFV1FfJiHBl0KgGlcP3O8AwgtmVoJw==",
   "success": true,
-  "projectFilePath": "D:\\Project\\myGym\\gym.Domain\\gym.Domain.csproj",
+  "projectFilePath": "D:\\Asap\\Public\\Backend\\gymPack\\gym.Domain\\gym.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ASAP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\abdallah.mustapha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

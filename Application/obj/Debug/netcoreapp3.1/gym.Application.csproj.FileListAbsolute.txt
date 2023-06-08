@@ -11,3 +11,16 @@ D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.Core
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CopyComplete
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.dll
 D:\Project\myGym\Application\obj\Debug\netcoreapp3.1\gym.Application.pdb
+D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.deps.json
+D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.dll
+D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Application.pdb
+D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Domain.dll
+D:\Asap\Public\Backend\gymPack\Application\bin\Debug\netcoreapp3.1\gym.Domain.pdb
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.AssemblyReference.cache
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.AssemblyInfoInputs.cache
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.AssemblyInfo.cs
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CoreCompileInputs.cache
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.csproj.CopyComplete
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.dll
+D:\Asap\Public\Backend\gymPack\Application\obj\Debug\netcoreapp3.1\gym.Application.pdb

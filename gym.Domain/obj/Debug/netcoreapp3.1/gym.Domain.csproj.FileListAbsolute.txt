@@ -8,3 +8,13 @@ D:\Project\myGym\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.AssemblyInfo.cs
 D:\Project\myGym\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.csproj.CoreCompileInputs.cache
 D:\Project\myGym\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.dll
 D:\Project\myGym\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.pdb
+D:\Asap\Public\Backend\gymPack\gym.Domain\bin\Debug\netcoreapp3.1\gym.Domain.deps.json
+D:\Asap\Public\Backend\gymPack\gym.Domain\bin\Debug\netcoreapp3.1\gym.Domain.dll
+D:\Asap\Public\Backend\gymPack\gym.Domain\bin\Debug\netcoreapp3.1\gym.Domain.pdb
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.csproj.AssemblyReference.cache
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.AssemblyInfoInputs.cache
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.AssemblyInfo.cs
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.csproj.CoreCompileInputs.cache
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.dll
+D:\Asap\Public\Backend\gymPack\gym.Domain\obj\Debug\netcoreapp3.1\gym.Domain.pdb

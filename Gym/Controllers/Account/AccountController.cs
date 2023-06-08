@@ -36,24 +36,23 @@ namespace gym.Api.Controllers.Account
 
             if (createUser.IsSuccess)
             {
-                return CreatedAtRoute("ConfirmAccount",
-                    new IdentityBaseResponse
-                    {
-                        Id = createDto.GetHashCode(),
-                        IsSuccess = true,
-                        Message = "Registration Successfully",
-                        statusCode = StatusCodes.Status200OK,
-
-                    }, createUser);
+                return RedirectToAction("ConfirmAccount", new { createUser.Id });
 
             }
 
             return BadRequest();
         }
+        //new IdentityBaseResponse
+        //            {
+        //                Id = createDto.GetHashCode(),
+        //                IsSuccess = true,
+        //                Message = "Registration Successfully",
+        //                statusCode = StatusCodes.Status200OK,
 
+        //            },
 
         [HttpGet(Name = "ConfirmAccount")]
-        public async Task<IActionResult> ConfirmAccount(string userId, string Token)
+        public async Task<IActionResult> ConfirmAccount([FromBody] string userId, [FromBody] string Token)
         {
             if (!ModelState.IsValid)
             {
@@ -81,14 +80,14 @@ namespace gym.Api.Controllers.Account
 
 
         [HttpGet]
-        public async Task<IActionResult> LogInWithTwoFactoryCode(string Email, bool RememberMe)
+        public async Task<IActionResult> LogInWithTwoFactoryCode([FromBody] string Email, [FromBody] bool RememberMe = true)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var signInWith2Fac = await _mediator.Send(new signInWithTwoFactoryAuthRequest { Email = Email, RememberMe = RememberMe });
+            var signInWith2Fac = await _mediator.Send(new LogInTwoFactoryAuthRequest { Email = Email, RememberMe = RememberMe });
             if (signInWith2Fac != null)
             {
                 return Ok(new IdentityBaseResponse

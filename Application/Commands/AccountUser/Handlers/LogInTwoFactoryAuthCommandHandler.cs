@@ -13,18 +13,18 @@ using System.Threading.Tasks;
 
 namespace gym.Application.Commands.AccountUser.Handlers
 {
-    public class signInWithTwoFactoryAuthCommandHandler : IRequestHandler<signInWithTwoFactoryAuthRequest, IdentityBaseResponse>
+    public class LogInTwoFactoryAuthCommandHandler : IRequestHandler<LogInTwoFactoryAuthRequest, IdentityBaseResponse>
     {
         private readonly UserManager<User> _userManager;
         private readonly IEmailService _emailService;
 
-        public signInWithTwoFactoryAuthCommandHandler(UserManager<User> userManager, IEmailService emailService)
+        public LogInTwoFactoryAuthCommandHandler(UserManager<User> userManager, IEmailService emailService)
         {
             _userManager = userManager;
             _emailService = emailService;
         }
  
-        public async Task<IdentityBaseResponse> Handle(signInWithTwoFactoryAuthRequest request, CancellationToken cancellationToken)
+        public async Task<IdentityBaseResponse> Handle(LogInTwoFactoryAuthRequest request, CancellationToken cancellationToken)
         {
             var findUser = await _userManager.FindByEmailAsync(request.Email);
 
@@ -38,7 +38,7 @@ namespace gym.Application.Commands.AccountUser.Handlers
                     await _emailService.SendEmailAsync(
                         "abdollahsuper@gmail.com",
                         request.Email,
-                        "Your Gym OTP Code",
+                        "Your Gym OTP Verification Code is: ",
                         $"use this otp to login into your app.{getSecurityCode}"
                         );
                 }

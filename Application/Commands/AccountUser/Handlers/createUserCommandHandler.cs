@@ -24,7 +24,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
         private readonly IUrlHelper _urlHelper;
          
 
-        public createUserCommandHandler(UserManager<User> userManager, IEmailService emailService, IUrlHelperFactory urlHelperFactory, IValidator<CreateUserDto> validator, IUrlHelper urlHelper )
+        public createUserCommandHandler(UserManager<User> userManager, IEmailService emailService, IValidator<CreateUserDto> validator, IUrlHelper urlHelper )
         {
             _userManager = userManager;
             _emailService = emailService; 
@@ -43,15 +43,18 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
             }
 
-            var userNameGenerator = (request.createDto.FirstName.Trim().ToLower() + request.createDto.LastName.Trim().ToLower());
-            var userName = userNameGenerator.Substring(0, userNameGenerator.Length -1);
+            var rand = new Random().Next(1, 10)*2;
+            var userName = (request.createDto.FirstName.Trim().ToLower() + rand);
+            //var userNameGenerator = (request.createDto.FirstName.Trim().ToLower() + request.createDto.LastName.Trim().ToLower());
+            //var userName = userNameGenerator.Substring(0, userNameGenerator.Length -1);
 
             var dto = new User
             {
                 UserName = userName,
                 FirstName = request.createDto.FirstName,
                 LastName = request.createDto.LastName,
-                Email = request.createDto.Email
+                Email = request.createDto.Email,
+                TwoFactorEnabled = true
                
             };
 
@@ -64,7 +67,7 @@ namespace gym.Application.Commands.IdentityCommand.Queries
 
 
 
-                var verificationLink = _urlHelper.PageLink(pageName: "/ConfirmAccount",
+                var verificationLink = _urlHelper.ActionLink(controller: "/ConfirmAccount",
                             values: new
                             {
                                 User = dto.Id,

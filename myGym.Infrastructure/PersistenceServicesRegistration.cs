@@ -1,19 +1,14 @@
 ﻿using FluentValidation;
-using FluentValidation.AspNetCore;
-using gym.Application.Commands.IdentityCommand.Queries;
-using gym.Application.Commands.IdentityCommand.Requests;
 using gym.Application.Commands.Todo.Validations;
 using gym.Application.Commands.user.Validations;
 using gym.Application.DTOs.Identity;
 using gym.Application.DTOs.TodoDtos;
-using gym.Application.Extentions.Exceptions;
 using gym.Application.Extentions.IdentityExtension;
 using gym.Application.Interfaces.Repositories;
 using gym.Application.Interfaces.Services;
 using gym.Infrastructure.Persistances.ApplicationDBContext;
 using gym.Infrastructure.Persistances.Repositories;
 using gym.Infrastructure.Services.Email;
-using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -23,7 +18,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Reflection;
 using System.Text;
 
 namespace gym.Infrastructure
@@ -62,8 +56,7 @@ namespace gym.Infrastructure
             {
 
                 options.UseSqlServer(configuration.GetConnectionString("localConnection"));
-            }, ServiceLifetime.Transient
-            );
+            }, ServiceLifetime.Transient);
 
             return services;
         }
